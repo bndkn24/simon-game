@@ -4,6 +4,13 @@ var firstTimeBoo = false;
 var gamePattern = [];
 var level = 1;
 
+$(document).on("tap", function () {
+  if (!firstTimeBoo) {
+    nextSequence();
+    firstTimeBoo = true;
+  }
+});
+
 $(document).keypress(function () {
   if (!firstTimeBoo) {
     nextSequence();
